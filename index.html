@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心旷神“仪” - 随身AI心电监测预警卫士</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
+            <div class="text-2xl font-bold text-blue-600">心旷神“仪”</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#features" class="hover:text-blue-600">核心技术</a>
+                <a href="#rescue" class="hover:text-blue-600">智能救助</a>
+                <a href="#product" class="hover:text-blue-600">产品架构</a>
+            </div>
+            <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold">了解更多</button>
+        </div>
+    </nav>
+
+    <section class="hero-gradient pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate__animated animate__fadeInDown">
+                长者的随身AI动态心电监测与智能预警卫士
+            </h1>
+            <p class="text-xl text-slate-300 mb-10 max-w-3xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+                聚焦心绞痛、心肌缺血，基于边缘计算算法实时锁定ST段异常位移，为黄金救援争取每一秒。
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white">
+                    <div class="text-2xl font-bold">35%</div>
+                    <div class="text-xs text-slate-400">降低院外猝死风险</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white">
+                    <div class="text-2xl font-bold">3-5 min</div>
+                    <div class="text-xs text-slate-400">提前识别缺血预警</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">核心技术：ST段动态扫描</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-blue-600">🧠</div>
+                <h3 class="text-xl font-bold mb-3">边缘侧AI识别</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">利用Arduino高频采样，在硬件端实时解析QRS波群，精准追踪ST段抬高或压低轨迹。</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6 text-green-600">🛡️</div>
+                <h3 class="text-xl font-bold mb-3">多模态行为干预</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">监测大幅度动作引发的循环压力波动，主动触发语音播报，预防体位性低血压风险。</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6 text-red-600">📡</div>
+                <h3 class="text-xl font-bold mb-3">BLE 5.0 矩阵告警</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">捕捉异常后3秒内启动三重矩阵预警：硬件蜂鸣闪烁、APP深度推送、联系人全渠道告警。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="rescue" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1">
+                <span class="text-blue-400 font-bold tracking-widest text-sm uppercase">独家亮点</span>
+                <h2 class="text-4xl font-bold mt-4 mb-6 italic">“路人救助引导模式”</h2>
+                <p class="text-slate-400 mb-8 text-lg">
+                    当设备识别到恶性心律失常时，自动切换至社会化急救语境。内置SOP级语音指引，引导第一目击者规范急救，消除路人“不敢救、不会救”的心理真空。
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-600/20 text-blue-400 p-2 rounded">🔊</div>
+                        <p class="text-sm italic">“我是医疗监测仪，患者可能心梗，请协助其平卧...”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 bg-white/5 p-4 rounded-3xl border border-white/10">
+                <div class="aspect-video bg-slate-800 rounded-2xl flex items-center justify-center italic text-slate-500">
+                    [请替换为您认可的那张产品平面图]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-400 text-sm border-t border-slate-200">
+        <p>© 2026 广州卫生职业技术学院 - 心旷神“仪”项目组</p>
+    </footer>
+
+</body>
+</html>
