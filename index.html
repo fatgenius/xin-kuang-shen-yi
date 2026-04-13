@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; }
+        .tech-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-900">
@@ -16,87 +17,115 @@
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
             <div class="flex items-center gap-2">
-                <div class="text-2xl font-bold text-blue-600">心旷神"仪"</div>
-                <img src="./LOGO.png" alt="心旷神仪 LOGO" class="h-8">
+                <div class="text-2xl font-bold text-blue-600 tracking-tight">心旷神"仪"</div>
+                <img src="./LOGO.png" alt="LOGO" class="h-8">
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#features" class="hover:text-blue-600">核心技术</a>
-                <a href="#rescue" class="hover:text-blue-600">智能救助</a>
-                <a href="#product" class="hover:text-blue-600">产品架构</a>
+                <a href="#features" class="hover:text-blue-600 transition-colors">核心技术</a>
+                <a href="#rescue" class="hover:text-blue-600 transition-colors">智能救助</a>
+                <a href="#specs" class="hover:text-blue-600 transition-colors">硬件规格</a>
             </div>
-            <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold">了解更多</button>
+            <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all">了解更多</button>
         </div>
     </nav>
 
-    <section class="hero-gradient pt-32 pb-20 px-4">
+    <section class="hero-gradient pt-32 pb-24 px-4">
         <div class="max-w-7xl mx-auto text-center">
             <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate__animated animate__fadeInDown">
                 长者的随身AI动态心电监测与智能预警卫士
             </h1>
-            <p class="text-xl text-slate-300 mb-10 max-w-3xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+            <p class="text-xl text-slate-300 mb-10 max-w-3xl mx-auto animate__animated animate__fadeInUp">
                 聚焦心绞痛、心肌缺血，基于边缘计算算法实时锁定ST段异常位移，为黄金救援争取每一秒。
             </p>
-            <div class="flex flex-wrap justify-center gap-4 animate__animated animate__fadeInUp animate__delay-1s">
-                <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white">
-                    <div class="text-2xl font-bold">35%</div>
-                    <div class="text-xs text-slate-400">降低院外猝死风险</div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-white min-w-[160px]">
+                    <div class="text-3xl font-bold text-blue-400">35%</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">降低院外猝死风险</div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white">
-                    <div class="text-2xl font-bold">3-5 min</div>
-                    <div class="text-xs text-slate-400">提前识别缺血预警</div>
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-white min-w-[160px]">
+                    <div class="text-3xl font-bold text-green-400">3-5 min</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">提前识别缺血预警</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="features" class="py-20 max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold mb-4">核心技术：ST段动态扫描</h2>
-            <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
-                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-blue-600">🧠</div>
-                <h3 class="text-xl font-bold mb-3">边缘侧AI识别</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">利用Arduino高频采样，在硬件端实时解析QRS波群，精准追踪ST段抬高或压低轨迹。</p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
-                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6 text-green-600">🛡️</div>
-                <h3 class="text-xl font-bold mb-3">多模态行为干预</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">监测大幅度动作引发的循环压力波动，主动触发语音播报，预防体位性低血压风险。</p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
-                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6 text-red-600">📡</div>
-                <h3 class="text-xl font-bold mb-3">BLE 5.0 矩阵告警</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">捕捉异常后3秒内启动三重矩阵预警：硬件蜂鸣闪烁、APP深度推送、联系人全渠道告警。</p>
-            </div>
-        </div>
-    </section>
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="flex-1 animate__animated animate__fadeInLeft">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                        <img src="./微信图片_20260405155504_15329_12.png" alt="产品架构与佩戴图" class="relative rounded-2xl shadow-2xl w-full object-cover">
+                    </div>
+                </div>
 
-    <section id="rescue" class="py-20 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-            <div class="flex-1">
-                <span class="text-blue-400 font-bold tracking-widest text-sm uppercase">独家亮点</span>
-                <h2 class="text-4xl font-bold mt-4 mb-6 italic">“路人救助引导模式”</h2>
-                <p class="text-slate-400 mb-8 text-lg">
-                    当设备识别到恶性心律失常时，自动切换至社会化急救语境。内置SOP级语音指引，引导第一目击者规范急救，消除路人“不敢救、不会救”的心理真空。
-                </p>
-                <div class="space-y-4">
-                    <div class="flex items-start gap-4">
-                        <div class="bg-blue-600/20 text-blue-400 p-2 rounded">🔊</div>
-                        <p class="text-sm italic">“我是医疗监测仪，患者可能心梗，请协助其平卧...”</p>
+                <div class="flex-1 space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900">核心技术：ST段动态扫描矩阵</h2>
+                        <p class="text-slate-500 mt-4 leading-relaxed text-lg">基于 Arduino 与 AD8232 的边缘计算架构，实现了从信号采集到预警的极速闭环。</p>
+                    </div>
+
+                    <div class="grid gap-6">
+                        <div class="flex gap-4 p-4 rounded-xl border border-slate-100 hover:bg-blue-50/50 transition-colors">
+                            <div class="text-2xl">⚡</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">边缘侧分析 (Edge Computing)</h4>
+                                <p class="text-sm text-slate-600 mt-1">本地处理采样率 ≥500Hz 的原生数据，支持基线漂移补偿与实时异常判定。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl border border-slate-100 hover:bg-blue-50/50 transition-colors">
+                            <div class="text-2xl">🩺</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">AD8232 模拟前端</h4>
+                                <p class="text-sm text-slate-600 mt-1">医疗级动态心电核心，配合五点磁吸式柔性电极，确保静息与运动状态信号稳定。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl border border-slate-100 hover:bg-blue-50/50 transition-colors">
+                            <div class="text-2xl">📲</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">APP 实时联动</h4>
+                                <p class="text-sm text-slate-600 mt-1">蓝牙 BLE 5.0 极速传输，手机端实时高亮 ST 段抬高/压低轨迹，同步推送紧急联系人。</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="flex-1 bg-white/5 p-4 rounded-3xl border border-white/10">
-                <div id="rescue">
-                      <img src="./微信图片_20260405155504_15329_12.png" alt="产品示意图" class="rounded-2xl w-full">
+        </div>
+    </section>
+
+    <section id="rescue" class="py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
+            <div class="flex-1 space-y-6">
+                <span class="text-blue-500 font-bold tracking-widest text-sm uppercase px-3 py-1 bg-blue-500/10 rounded-full">独家黑科技</span>
+                <h2 class="text-4xl font-bold text-white italic">“路人救助引导模式”</h2>
+                <p class="text-slate-400 text-lg leading-relaxed">
+                    识别恶性心律失常时，硬件自动开启语音 SOP 导引。通过高分贝蜂鸣与语音播报，指引第一目击者完成平卧体位、AED 取用等规范动作。
+                </p>
+                <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                    <p class="text-blue-400 italic flex items-center gap-3">
+                        <span class="text-2xl">📢</span> 语音示例：“系统识别患者疑似心梗，请协助其坐下并呼叫120...”
+                    </p>
+                </div>
+            </div>
+            <div class="flex-1 text-center">
+                <div class="inline-block p-1 bg-gradient-to-tr from-blue-600 to-transparent rounded-3xl">
+                    <div class="bg-slate-800 p-8 rounded-3xl border border-white/5">
+                        <div class="text-6xl mb-4">🆘</div>
+                        <p class="text-white font-bold text-xl tracking-wide">3秒响应·矩阵告警</p>
+                        <p class="text-slate-500 text-sm mt-2">硬件/手机/云端三重并行</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-slate-400 text-sm border-t border-slate-200">
+    <footer class="py-12 text-center text-slate-500 text-sm border-t border-slate-200">
+        <div class="mb-4 text-slate-300">
+            <a href="#" class="mx-3 hover:text-blue-600 transition-colors">隐私政策</a>
+            <a href="#" class="mx-3 hover:text-blue-600 transition-colors">技术文档</a>
+            <a href="#" class="mx-3 hover:text-blue-600 transition-colors">联系我们</a>
+        </div>
         <p>© 2026 广州卫生职业技术学院 - 心旷神“仪”项目组</p>
     </footer>
 
